@@ -6,4 +6,8 @@ $('ul:first li a').click(function() {
 	$(this).parent().addClass('current-menu-item');
 
 });
+	//aparece el submenu en hover en el primer li de ul 
+	$('ul:first li').hover(function(){
+		$(this).find('.sub-menu').toggle();
+	});
 });
