@@ -8,6 +8,6 @@ $('ul:first li a').click(function() {
 });
 	//aparece el submenu en hover en el primer li de ul 
 	$('ul:first li').hover(function(){
-		$(this).find('.sub-menu').toggle();
+		$(this).find('.sub-menu').fadeToggle(300);
 	});
 });
