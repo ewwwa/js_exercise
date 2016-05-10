@@ -8,10 +8,13 @@ $('ul:first li a').click(function() {
 });
 	//aparece el submenu en hover en el primer li de ul 
 	$('ul:first li').hover(function(){
-		$(this).find('.sub-menu').fadeToggle(300);
+		if ($(window).width() > 990){
+			$(this).find('.sub-menu').fadeToggle(300);
+
+		} 
 	});
 
-	//muestra o esconde el menú del móvil
+	//muestra el menú del móvil
 	$('#mobile-button').click(function() {
 		$('#menu-container').show();
 		$('#mobile-button').hide();
@@ -19,11 +22,27 @@ $('ul:first li a').click(function() {
 		
 	});
 
+	//esconde el menú del móvil
 	$('#mobile-close').click(function() {
 		$('.sub-menu').hide();
 		$('#menu-container').hide();
 		$('#mobile-button').show();
 		$('#mobile-close').hide();
 	});
+
+	//si es más grande, esconde los botones 
+	$(window).resize(function() {
+		if ($(window).width() > 991){
+			$('#mobile-button').hide();
+			$('#mobile-close').hide();
+
+		} else { $('#mobile-button').show();
+
+
+	}
+
+});
+
+
 
 });
