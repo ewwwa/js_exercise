@@ -11,17 +11,19 @@ $('ul:first li a').click(function() {
 		$(this).find('.sub-menu').fadeToggle(300);
 	});
 
-		//muestra o esconde el menú del móvil
-		$('#mobile-button').click(function() {
-			$('#menu-container').show();
-			$('#mobile-button').hide();
-			$('#mobile-close').show();
-		});
-
-		$('#mobile-close').click(function() {
-			$('.sub-menu').hide();
-			$('#menu-container').hide();
-			$('#mobile-button').show();
-			$('#mobile-close').hide();
-		});
+	//muestra o esconde el menú del móvil
+	$('#mobile-button').click(function() {
+		$('#menu-container').show();
+		$('#mobile-button').hide();
+		$('#mobile-close').show();
+		
 	});
+
+	$('#mobile-close').click(function() {
+		$('.sub-menu').hide();
+		$('#menu-container').hide();
+		$('#mobile-button').show();
+		$('#mobile-close').hide();
+	});
+
+});
